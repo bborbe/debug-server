@@ -4,13 +4,15 @@ Logs content and header of each request.
 
 ## Install
 
-`go get github.com/bborbe/server/cmd/debug-server`
+```bash
+go get github.com/bborbe/server/cmd/debug-server
+```
 
 ## Run
 
 Debug Server always return ok  
 
-```
-debug_server \
+```bash
+debug-server \
 -port 8080
 ```
