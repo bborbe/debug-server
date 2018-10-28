@@ -22,7 +22,7 @@ func (h *Handler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	if err != nil {
 		glog.Warningf("dump request failed: %v", err)
 	}
-	fmt.Fprintln(h.Writer, string(content))
+	fmt.Fprintf(h.Writer, "%s\n\n", string(content))
 	resp.WriteHeader(200)
 	fmt.Fprintln(resp, string(content))
 }
